@@ -23,7 +23,7 @@
             <div class="bg-white shadow-sm rounded-lg p-4 mb-4">
                 <div class="flex items-center space-x-1">
                     @for ($i = 1; $i <= 5; $i++)
-                        <span class="{{ $i <= $article->rating ? 'text-yellow-400' : 'text-gray-300' }} text-xl">★</span>
+                        <span class="{{ $i <= $comment->rating ? 'text-yellow-400' : 'text-gray-300' }} text-xl">★</span>
                     @endfor
                 </div>
                 <p class="font-semibold text-blue-600">{{ $comment->name }}</p>
