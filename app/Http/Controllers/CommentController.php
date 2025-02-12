@@ -16,6 +16,8 @@ class CommentController extends Controller
         ]);
 
         $article->comments()->create($validated);
+        $article->rating = round($article->comments()->avg('rating'));
+        $article->save();
 
         return redirect()->route('articles.show', $article)->with('success', 'Комментарий добавлен!');
     }
